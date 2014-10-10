@@ -7,9 +7,9 @@
 @mixin vertical-align(){
 	position: relative;
 	top: 50%;
-	@include transform(translateY(-50%));
-	@include backface-visibility(hidden);
-	@include perspective(1000px);
+	-ms-transform: translateY(50%); /* IE 9 */
+	-webkit-transform: translateY(50%); /* Chrome, Safari, Opera */
+	transform: translateY(50%);
 }
 
 @mixin background-center(){
