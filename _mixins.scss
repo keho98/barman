@@ -1,0 +1,19 @@
+@mixin topLeft($position: absolute){
+	position: $position;
+	top: 0;
+	left: 0;	
+}
+
+@mixin vertical-align(){
+	position: relative;
+	top: 50%;
+	@include transform(translateY(-50%));
+	@include backface-visibility(hidden);
+	@include perspective(1000px);
+}
+
+@mixin background-center(){
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center; 
+}
